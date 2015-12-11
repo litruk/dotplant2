@@ -229,7 +229,7 @@ class ObjectRule implements UrlRuleInterface
                     $next_part = ltrim($result->rest_part, '/');
                     $url_parts[] = $result;
                 } elseif ($result === false && $handler->optional===false) {
-                    continue;
+                    continue 2;
                 }
             }
             if (count($url_parts)==0) {
